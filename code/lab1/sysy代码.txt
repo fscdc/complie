@@ -1,0 +1,39 @@
+// 变量、常量声明和初始化
+int a = 5;
+const float pi = 3.1415926;
+
+// 输入半径获取面积
+float getarea(float r){
+      return r*r*pi;
+}
+
+
+int main() {
+    int i = 10;
+    int d = getint();
+    float r = d / 2;
+
+    int arr[5];
+    arr[0] = 10;
+    int matrix[2][2];
+    matrix[0][0]=5;
+    
+    float s = getarea(r);
+
+    while (i > 0) {
+            i = i - 1;
+	    s = s + arr[0];
+	    if (s > 100 && s < 150) {
+                 break;
+            }
+            
+    }
+
+    int sm = s + matrix[0][0] + a;
+    putint(sm);
+
+    return 0;
+}
+
+
+

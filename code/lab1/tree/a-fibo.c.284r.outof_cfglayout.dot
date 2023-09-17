@@ -1,0 +1,96 @@
+digraph "a-fibo.c.284r.outof_cfglayout" {
+overlap=false;
+subgraph "cluster_main" {
+	style="dashed";
+	color="black";
+	label="main ()";
+	fn_0_basic_block_0 [shape=Mdiamond,style=filled,fillcolor=white,label="ENTRY"];
+
+	fn_0_basic_block_2 [shape=record,style=filled,fillcolor=lightgrey,label="{\ \ \ \ 4:\ NOTE_INSN_BASIC_BLOCK\ 2\l\
+|\ \ \ \ 2:\ NOTE_INSN_FUNCTION_BEG\l\
+|\ \ \ \ 3:\ \{[frame:DI-0x8]=unspec[[0x28]]\ 79;scratch=0;clobber\ flags:CC;\}\l\
+|\ \ \ \ 7:\ [frame:DI-0x18]=0\l\
+|\ \ \ \ 8:\ [frame:DI-0x14]=0x1\l\
+|\ \ \ \ 9:\ [frame:DI-0x10]=0x1\l\
+|\ \ \ 10:\ \{r85:DI=frame:DI-0x1c;clobber\ flags:CC;\}\l\
+|\ \ \ 11:\ si:DI=r85:DI\l\
+|\ \ \ 12:\ r86:DI=`*.LC0'\l\
+|\ \ \ 13:\ di:DI=r86:DI\l\
+\ \ \ \ \ \ REG_EQUAL\ `*.LC0'\l\
+|\ \ \ 14:\ ax:QI=0\l\
+|\ \ \ 15:\ ax:SI=call\ [`*__isoc99_scanf']\ argc:0\l\
+|\ \ \ 16:\ r87:SI=[frame:DI-0x18]\l\
+|\ \ \ 17:\ si:SI=r87:SI\l\
+|\ \ \ 18:\ r88:DI=`*.LC1'\l\
+|\ \ \ 19:\ di:DI=r88:DI\l\
+\ \ \ \ \ \ REG_EQUAL\ `*.LC1'\l\
+|\ \ \ 20:\ ax:QI=0\l\
+|\ \ \ 21:\ ax:SI=call\ [`printf']\ argc:0\l\
+|\ \ \ 22:\ r89:SI=[frame:DI-0x14]\l\
+|\ \ \ 23:\ si:SI=r89:SI\l\
+|\ \ \ 24:\ r90:DI=`*.LC1'\l\
+|\ \ \ 25:\ di:DI=r90:DI\l\
+\ \ \ \ \ \ REG_EQUAL\ `*.LC1'\l\
+|\ \ \ 26:\ ax:QI=0\l\
+|\ \ \ 27:\ ax:SI=call\ [`printf']\ argc:0\l\
+|\ \ \ 68:\ pc=L44\l\
+}"];
+
+	fn_0_basic_block_4 [shape=record,style=filled,fillcolor=lightgrey,label="{\ \ \ 44:\ L44:\l\
+|\ \ \ 45:\ NOTE_INSN_BASIC_BLOCK\ 4\l\
+|\ \ \ 46:\ r82:SI=[frame:DI-0x1c]\l\
+|\ \ \ 48:\ flags:CCGC=cmp([frame:DI-0x10],r82:SI)\l\
+|\ \ \ 49:\ pc=\{(flags:CCGC\<0)?L47:pc\}\l\
+}"];
+
+	fn_0_basic_block_5 [shape=record,style=filled,fillcolor=lightgrey,label="{\ \ \ 50:\ NOTE_INSN_BASIC_BLOCK\ 5\l\
+|\ \ \ 51:\ r83:SI=0\l\
+|\ \ \ 54:\ r84:SI=r83:SI\l\
+|\ \ \ 58:\ \{flags:CCZ=unspec[[frame:DI-0x8],[0x28]]\ 80;clobber\ scratch;\}\l\
+|\ \ \ 59:\ pc=\{(flags:CCZ==0)?L62:pc\}\l\
+}"];
+
+	fn_0_basic_block_6 [shape=record,style=filled,fillcolor=lightgrey,label="{\ \ \ 66:\ NOTE_INSN_BASIC_BLOCK\ 6\l\
+|\ \ \ 60:\ call\ [`__stack_chk_fail']\ argc:0\l\
+\ \ \ \ \ \ REG_ARGS_SIZE\ 0\l\
+\ \ \ \ \ \ REG_NORETURN\ 0\l\
+\ \ \ \ \ \ REG_EH_REGION\ 0\l\
+}"];
+
+	fn_0_basic_block_7 [shape=record,style=filled,fillcolor=lightgrey,label="{\ \ \ 62:\ L62:\l\
+|\ \ \ 67:\ NOTE_INSN_BASIC_BLOCK\ 7\l\
+|\ \ \ 63:\ ax:SI=r84:SI\l\
+|\ \ \ 64:\ use\ ax:SI\l\
+}"];
+
+	fn_0_basic_block_3 [shape=record,style=filled,fillcolor=lightgrey,label="{\ \ \ 47:\ L47:\l\
+|\ \ \ 30:\ NOTE_INSN_BASIC_BLOCK\ 3\l\
+|\ \ \ 31:\ r91:SI=[frame:DI-0x14]\l\
+|\ \ \ 32:\ [frame:DI-0xc]=r91:SI\l\
+|\ \ \ 33:\ r92:SI=[frame:DI-0x18]\l\
+|\ \ \ 34:\ \{[frame:DI-0x14]=[frame:DI-0x14]+r92:SI;clobber\ flags:CC;\}\l\
+|\ \ \ 35:\ r93:SI=[frame:DI-0x14]\l\
+|\ \ \ 36:\ si:SI=r93:SI\l\
+|\ \ \ 37:\ r94:DI=`*.LC1'\l\
+|\ \ \ 38:\ di:DI=r94:DI\l\
+\ \ \ \ \ \ REG_EQUAL\ `*.LC1'\l\
+|\ \ \ 39:\ ax:QI=0\l\
+|\ \ \ 40:\ ax:SI=call\ [`printf']\ argc:0\l\
+|\ \ \ 41:\ r95:SI=[frame:DI-0xc]\l\
+|\ \ \ 42:\ [frame:DI-0x18]=r95:SI\l\
+|\ \ \ 43:\ \{[frame:DI-0x10]=[frame:DI-0x10]+0x1;clobber\ flags:CC;\}\l\
+}"];
+
+	fn_0_basic_block_1 [shape=Mdiamond,style=filled,fillcolor=white,label="EXIT"];
+
+	fn_0_basic_block_0:s -> fn_0_basic_block_2:n [style="solid,bold",color=blue,weight=100,constraint=true];
+	fn_0_basic_block_2:s -> fn_0_basic_block_4:n [style="solid,bold",color=black,weight=10,constraint=true,label="[100%]"];
+	fn_0_basic_block_3:s -> fn_0_basic_block_4:n [style="dotted,bold",color=blue,weight=10,constraint=false];
+	fn_0_basic_block_4:s -> fn_0_basic_block_3:n [style="solid,bold",color=black,weight=10,constraint=true];
+	fn_0_basic_block_4:s -> fn_0_basic_block_5:n [style="solid,bold",color=blue,weight=100,constraint=true];
+	fn_0_basic_block_5:s -> fn_0_basic_block_7:n [style="solid,bold",color=black,weight=10,constraint=true];
+	fn_0_basic_block_5:s -> fn_0_basic_block_6:n [style="solid,bold",color=blue,weight=100,constraint=true];
+	fn_0_basic_block_7:s -> fn_0_basic_block_1:n [style="solid,bold",color=blue,weight=100,constraint=true,label="[100%]"];
+	fn_0_basic_block_0:s -> fn_0_basic_block_1:n [style="invis",constraint=true];
+}
+}
